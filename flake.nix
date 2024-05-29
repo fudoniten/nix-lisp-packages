@@ -30,7 +30,7 @@
       flake = false;
     };
     ip-utils = {
-      url = "git+https://fudo.dev/publc/ip-utils.git";
+      url = "git+https://fudo.dev/public/ip-utils.git";
       flake = false;
     };
     oscicat = {
