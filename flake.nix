@@ -10,7 +10,7 @@
       flake = false;
     };
     arrows = {
-      url = "github:Harlequin/arrows";
+      url = "https://gitlab.com/Harleqin/arrows.git";
       flake = false;
     };
     cl-sasl = {
