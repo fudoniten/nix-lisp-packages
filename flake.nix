@@ -22,7 +22,7 @@
       flake = false;
     };
     file-types = {
-      url = "github:eugenia/file-types";
+      url = "github:eugeneia/file-types";
       flake = false;
     };
     inferior-shell = {
