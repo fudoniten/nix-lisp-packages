@@ -74,6 +74,17 @@
           });
         };
 
+        lib = let
+          gatherDependencies = with nixpkgs.lib;
+            pkg:
+            unique (pkg.propagatedBuildInputs
+              ++ (concatMap gatherDepdendencies pkg.propagatedBuildInputs));
+
+          lispSourceRegistry = pkg:
+            nixpkgs.lib.concatStringsSep ":"
+            (map (p: "${p}//") (gatherDependencies pkg));
+        in { inherit gatherDependencies lispSourceRegistry; };
+
         nixosModules = rec {
           default = packages;
           packages = { ... }: {
